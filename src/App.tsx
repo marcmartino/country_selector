@@ -1,23 +1,32 @@
-import logo from "./logo.svg";
+import { useState } from "react";
+import ReactCountryFlag from "react-country-flag";
 import style from "./App.module.scss";
+import {
+  Country,
+  CountrySelect,
+} from "./components/CountrySelect/CountrySelect";
 
 function App() {
+  const [selectedCountry, setSelectedCountry] = useState<Country>();
+
+  console.log("app");
+
   return (
     <div className={style.App}>
-      <header className={style["App-header"]}>
-        <img src={logo} className={style["App-logo"]} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={style["App-link"]}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CountrySelect
+        country={selectedCountry?.value}
+        onChange={setSelectedCountry}
+      />
+      {selectedCountry && (
+        <div className={style.selectedCountryRow}>
+          <ReactCountryFlag
+            svg
+            style={{ fontSize: 36, marginRight: 10 }}
+            countryCode={selectedCountry.value.toUpperCase()}
+          />
+          <h2>{selectedCountry.label}</h2>
+        </div>
+      )}
     </div>
   );
 }

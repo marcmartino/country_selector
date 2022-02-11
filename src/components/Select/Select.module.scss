@@ -1,0 +1,73 @@
+$placeholderGray: #adadad;
+$black: #000;
+$white: #fff;
+
+.placeholder {
+  color: $placeholderGray;
+}
+
+.valueDropdown {
+  border: 1px solid rgba($black, 0.2);
+  background-color: $white;
+  padding: 4px 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: rgba($black, 0.4);
+  }
+}
+
+.dropdownIcon {
+  margin-left: 6px;
+}
+
+.dropdownMenu {
+  background-color: $white;
+  max-height: 199px;
+  width: 230px;
+  border: 1px solid rgba($black, 0.08);
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba($black, 0.1);
+  position: absolute;
+}
+
+.dropdownSearchRow {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  height: 35px;
+  align-items: center;
+  border-bottom: 1px solid rgba($black, 0.08);
+}
+
+.searchInput {
+  border: 0;
+  padding-left: 8.53px;
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.rowButton {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.hoveredRow {
+  background-color: papayawhip;
+}
+
+.emptySearch {
+  color: $placeholderGray;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 4px;
+}
