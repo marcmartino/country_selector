@@ -2,9 +2,7 @@ import useFetch from "use-http";
 import ReactCountryFlag from "react-country-flag";
 import style from "./CountrySelect.module.scss";
 import { Select } from "../Select/Select";
-
-const COUNTRY_URL =
-  "https://gist.githubusercontent.com/rusty-key/659db3f4566df459bd59c8a53dc9f71f/raw/4127f9550ef063121c564025f6d27dceeb279623/counties.json";
+import { COUNTRY_API_URL } from "../../Constants";
 
 export type Country = { label: string; value: string };
 
@@ -16,7 +14,7 @@ type Props = {
 
 export const CountrySelect = ({ country, onChange, className }: Props) => {
   const { data: countries = [] } = useFetch<Country[]>(
-    COUNTRY_URL,
+    COUNTRY_API_URL,
     { retries: 2 },
     []
   );

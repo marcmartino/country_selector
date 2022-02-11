@@ -134,7 +134,11 @@ export const Select = <T extends Option>({
           ) : (
             <span className={style.placeholder}>{placeholder}</span>
           )}
-          <CaretDownFill className={style.dropdownIcon} />
+          <CaretDownFill
+            className={style.dropdownIcon}
+            size="18"
+            color="#333"
+          />
         </button>
       </div>
       {dropdownActive && (

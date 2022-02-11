@@ -1,8 +1,14 @@
 @import url("http://fonts.cdnfonts.com/css/arial-mt");
 
+$placeholderGray: #adadad;
+$black: #000;
+$white: #fff;
+$textBlack: #333;
+
 body {
   margin: 0;
   font-family: "Arial MT", Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $textBlack;
 }

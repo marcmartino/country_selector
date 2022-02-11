@@ -9,8 +9,6 @@ import {
 function App() {
   const [selectedCountry, setSelectedCountry] = useState<Country>();
 
-  console.log("app");
-
   return (
     <div className={style.App}>
       <CountrySelect

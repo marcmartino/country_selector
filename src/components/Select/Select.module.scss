@@ -1,6 +1,4 @@
-$placeholderGray: #adadad;
-$black: #000;
-$white: #fff;
+@import "../../index.scss";
 
 .placeholder {
   color: $placeholderGray;
@@ -9,7 +7,7 @@ $white: #fff;
 .valueDropdown {
   border: 1px solid rgba($black, 0.2);
   background-color: $white;
-  padding: 4px 10px;
+  padding: 4px 6px 4px 10px;
 
   display: flex;
   flex-direction: row;
@@ -24,7 +22,7 @@ $white: #fff;
 }
 
 .dropdownIcon {
-  margin-left: 6px;
+  margin-left: 2px;
 }
 
 .dropdownMenu {
