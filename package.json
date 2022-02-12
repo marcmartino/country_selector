@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://country_select.marmar.io",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
     "grommet-icons": "^4.7.0",
     "react": "^17.0.2",
